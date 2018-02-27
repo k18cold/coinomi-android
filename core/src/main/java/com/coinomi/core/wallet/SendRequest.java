@@ -21,8 +21,7 @@ import com.coinomi.core.coins.CoinType;
 import com.coinomi.core.coins.Value;
 import com.coinomi.core.messages.TxMessage;
 import com.coinomi.core.wallet.families.bitcoin.CoinSelector;
-import com.google.common.base.Objects;
-import com.google.common.base.Objects.ToStringHelper;
+import com.google.common.base.MoreObjects;
 
 import org.bitcoinj.core.Transaction;
 import org.bitcoinj.core.Wallet.MissingSigsMode;
@@ -187,7 +186,7 @@ public class SendRequest<T extends AbstractTransaction> implements Serializable 
     @Override
     public String toString() {
         // print only the user-settable fields
-        ToStringHelper helper = Objects.toStringHelper(this).omitNullValues();
+        MoreObjects.ToStringHelper helper = MoreObjects.toStringHelper(this).omitNullValues();
         helper.add("emptyWallet", emptyWallet);
         helper.add("changeAddress", changeAddress);
         helper.add("fee", fee);

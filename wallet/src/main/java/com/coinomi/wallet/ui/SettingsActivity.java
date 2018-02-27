@@ -14,7 +14,7 @@ public class SettingsActivity extends BaseWalletActivity {
         setContentView(R.layout.activity_fragment_wrapper);
 
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
+            getFragmentManager().beginTransaction()
                     .add(R.id.container, new SettingsFragment())
                     .commit();
         }

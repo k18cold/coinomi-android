@@ -1,7 +1,7 @@
 package com.coinomi.wallet.ui;
 
 import android.os.Bundle;
-import android.support.v4.preference.PreferenceFragment;
+import android.preference.PreferenceFragment;
 
 import com.coinomi.wallet.R;
 
